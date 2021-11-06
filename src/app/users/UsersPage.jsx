@@ -6,7 +6,7 @@ import { userService } from 'lib/services/userService'
 
 import { Loader } from 'components/loader/Loader'
 
-import { UsersPageItem } from './UsersPageItem'
+import { UserListItem } from './UserListItem'
 
 import './UsersPage.css'
 
@@ -21,7 +21,7 @@ const UsersPage = () => {
 
     const renderUsers = users => {
         const usersList = users.map(user => {
-            return <UsersPageItem user={user} key={user.id} />
+            return <UserListItem user={user} key={user.id} />
         })
         return usersList
     }

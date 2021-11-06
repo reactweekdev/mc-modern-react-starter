@@ -1,5 +1,6 @@
 class User {
     constructor(apiData) {
+        this.id = apiData.id
         this.name = apiData.name
         this.username = apiData.username
         this.email = apiData.email
