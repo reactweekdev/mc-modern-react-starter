@@ -1,10 +1,10 @@
 class AuthService {
-    #url = {
+    url = {
         login: '/'
     }
 
     login({ email, password }) {
-        this.#url.login
+        // this.url.login
 
         return new Promise((resolve, reject) => {
             if (email === 'r@w.com' && password === 'rw1234') {
@@ -24,4 +24,4 @@ class AuthService {
     }
 }
 
-const authService = new AuthService()
+export const authService = new AuthService()

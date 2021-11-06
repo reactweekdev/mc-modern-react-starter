@@ -3,7 +3,7 @@ const pathGroups = []
 module.exports = {
     extends: ['eslint:recommended', 'plugin:react/recommended', 'prettier'],
     parser: '@babel/eslint-parser',
-    plugins: ['import', 'unused-imports', '@babel'],
+    plugins: ['import', 'unused-imports', '@babel', 'react'],
     parserOptions: {
         ecmaFeatures: {
             jsx: true
@@ -20,7 +20,8 @@ module.exports = {
         jest: true,
         browser: true,
         amd: true,
-        node: true
+        node: true,
+        es6: true
     },
     rules: {
         // Use Array<> and ReadonlyArray<> syntax in types.
@@ -32,7 +33,7 @@ module.exports = {
         //     }
         // ],
         'import/order': [
-            'error',
+            'warn',
             {
                 'newlines-between': 'always',
                 pathGroups: pathGroups.map(path => ({

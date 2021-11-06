@@ -1,5 +1,7 @@
 import React from 'react'
 
+import { authService } from 'lib/services/authService'
+
 class LoginPage extends React.Component {
     state = {
         email: '',
