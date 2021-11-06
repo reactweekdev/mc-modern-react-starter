@@ -1,0 +1,17 @@
+{
+    "recommendations": [
+        "editorconfig.editorconfig",
+        "dbaeumer.vscode-eslint",
+        "tombonnike.vscode-status-bar-format-toggle",
+        "pkief.material-icon-theme",
+        "esbenp.prettier-vscode",
+        "gruntfuggly.todo-tree",
+        "visualstudioexptteam.vscodeintellicode",
+        "codezombiech.gitignore",
+        "dsznajder.es7-react-js-snippets",
+        "streetsidesoftware.code-spell-checker",
+        "formulahendry.auto-rename-tag",
+        "aaron-bond.better-comments",
+        "coenraads.bracket-pair-colorizer-2"
+    ]
+}
