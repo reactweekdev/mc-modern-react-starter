@@ -13,6 +13,5 @@ module.exports = {
     singleQuote: true,
     tabWidth: 4,
     trailingComma: 'none',
-    useTabs: false,
-    parser: 'typescript'
+    useTabs: false
 }

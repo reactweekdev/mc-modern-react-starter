@@ -2,7 +2,6 @@ import React from 'react'
 import { Route, Switch } from 'react-router-dom'
 
 import PrivateRoute from './PrivateRoute'
-
 import UserDetailsPage from './user-details/UserDetailsPage'
 import CreateUser from './users/CreateUser'
 import EditUser from './users/EditUser'

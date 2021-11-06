@@ -1,4 +1,5 @@
 import React, { Component } from 'react'
+
 import { emailValid } from '../../utils/helpers'
 
 export class UserForm extends Component {
@@ -144,10 +145,13 @@ export class UserForm extends Component {
                         <span
                             className="helper-text"
                             data-error="wrong"
-                            data-success="right">
+                            data-success="right"
+                        >
                             Name
                         </span>
-                        {error.name && <h6 className="error red-text">{error.name}</h6>}
+                        {error.name && (
+                            <h6 className="error red-text">{error.name}</h6>
+                        )}
                     </div>
                 </div>
                 <div className="row">
@@ -165,10 +169,13 @@ export class UserForm extends Component {
                         <span
                             className="helper-text"
                             data-error="wrong"
-                            data-success="right">
+                            data-success="right"
+                        >
                             Email
                         </span>
-                        {error.email && <h6 className="error red-text">{error.email}</h6>}
+                        {error.email && (
+                            <h6 className="error red-text">{error.email}</h6>
+                        )}
                     </div>
                 </div>
                 {this.renderActionButtons()}

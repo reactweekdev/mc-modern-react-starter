@@ -1,7 +1,7 @@
 const pathGroups = []
 
 module.exports = {
-    parser: '@typescript-eslint/parser',
+    parser: '@babel/eslint-parser',
     extends: ['eslint:recommended', 'plugin:react/recommended', 'prettier'],
     plugins: ['import', 'unused-imports'],
     parserOptions: {
@@ -46,7 +46,12 @@ module.exports = {
         'unused-imports/no-unused-imports-ts': 'error',
         'unused-imports/no-unused-vars-ts': [
             'warn',
-            { vars: 'all', varsIgnorePattern: '^_', args: 'after-used', argsIgnorePattern: '^_' }
+            {
+                vars: 'all',
+                varsIgnorePattern: '^_',
+                args: 'after-used',
+                argsIgnorePattern: '^_'
+            }
         ],
 
         'react/prop-types': 'off',

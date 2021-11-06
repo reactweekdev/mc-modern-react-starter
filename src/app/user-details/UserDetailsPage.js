@@ -1,8 +1,9 @@
 import React, { Component } from 'react'
+
 import { BASE_URL } from '../../utils/const'
+import { Loader } from '../../components/loader/Loader'
 
 import { UserDetails } from './UserDetails'
-import { Loader } from '../loader/Loader'
 
 class UserDetailsPage extends Component {
     constructor(props) {

@@ -15,12 +15,14 @@ export const UserDetails = props => {
                     <div className="col s6">
                         <button
                             onClick={onDeleteUser}
-                            className="btn waves-effect waves-light btn-small red">
+                            className="btn waves-effect waves-light btn-small red"
+                        >
                             Delete
                         </button>
                         <Link
                             to={`/users/${id}/edit`}
-                            className="btn waves-effect waves-light btn-small">
+                            className="btn waves-effect waves-light btn-small"
+                        >
                             Edit
                         </Link>
                     </div>
@@ -41,7 +43,8 @@ export const UserDetails = props => {
                                 <span
                                     className="helper-text"
                                     data-error="wrong"
-                                    data-success="right">
+                                    data-success="right"
+                                >
                                     Name
                                 </span>
                             </div>
@@ -56,7 +59,8 @@ export const UserDetails = props => {
                                 <span
                                     className="helper-text"
                                     data-error="wrong"
-                                    data-success="right">
+                                    data-success="right"
+                                >
                                     Email
                                 </span>
                             </div>
@@ -71,7 +75,8 @@ export const UserDetails = props => {
                                 <span
                                     className="helper-text"
                                     data-error="wrong"
-                                    data-success="right">
+                                    data-success="right"
+                                >
                                     City
                                 </span>
                             </div>
@@ -86,7 +91,8 @@ export const UserDetails = props => {
                                 <span
                                     className="helper-text"
                                     data-error="wrong"
-                                    data-success="right">
+                                    data-success="right"
+                                >
                                     Street
                                 </span>
                             </div>
@@ -101,7 +107,8 @@ export const UserDetails = props => {
                                 <span
                                     className="helper-text"
                                     data-error="wrong"
-                                    data-success="right">
+                                    data-success="right"
+                                >
                                     ZIP
                                 </span>
                             </div>

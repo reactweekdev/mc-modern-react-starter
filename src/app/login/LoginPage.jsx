@@ -7,30 +7,28 @@ class LoginPage extends React.Component {
         error: ''
     }
 
-    _onInputChange = event => {
+    handleInputChange = event => {
         event.preventDefault()
         const { name, value } = event.target
 
         this.setState({ [name]: value })
     }
 
-    _onFormSubmit = () => {
-        // THIS IS MOCK EXAMPLE
-        const { email, password } = this.state
+    handleFormSubmit = async () => {
+        try {
+            // THIS IS MOCK EXAMPLE
+            const { email, password } = this.state
+            const res = await authService.login({
+                email,
+                password
+            })
 
-        if (email === 'r@w.com' && password === 'rw1234') {
-            const authdata = window.btoa(email + ':' + password)
-            localStorage.setItem('user', JSON.stringify(authdata))
+            //TODO: Show success toast
 
             this.props.history.push('/')
-            return
+        } catch (error) {
+            this.setState({ error: error.message })
         }
-
-        this.setState({ error: 'Invalid email/password' }, () => {
-            setTimeout(() => {
-                this.setState({ error: '' })
-            }, 1500)
-        })
     }
 
     render() {
@@ -48,7 +46,7 @@ class LoginPage extends React.Component {
                                 type="email"
                                 className="validate"
                                 name="email"
-                                onChange={this._onInputChange}
+                                onChange={this.handleInputChange}
                             />
                             <span
                                 className="helper-text"
@@ -68,7 +66,7 @@ class LoginPage extends React.Component {
                                 type="password"
                                 className="validate"
                                 name="password"
-                                onChange={this._onInputChange}
+                                onChange={this.handleInputChange}
                             />
                             <span
                                 className="helper-text"
@@ -87,7 +85,7 @@ class LoginPage extends React.Component {
                     <div className="right">
                         <div
                             className="waves-effect waves-light btn indigo"
-                            onClick={this._onFormSubmit}
+                            onClick={this.handleFormSubmit}
                         >
                             <i className="material-icons left">cloud</i>Login
                         </div>
