@@ -1,4 +1,5 @@
 import { BASE_URL } from 'utils/const'
+
 import User from '../models/User'
 
 class UserService {

@@ -1,9 +1,9 @@
 const pathGroups = []
 
 module.exports = {
-    parser: '@babel/eslint-parser',
     extends: ['eslint:recommended', 'plugin:react/recommended', 'prettier'],
-    plugins: ['import', 'unused-imports'],
+    parser: '@babel/eslint-parser',
+    plugins: ['import', 'unused-imports', '@babel'],
     parserOptions: {
         ecmaFeatures: {
             jsx: true
@@ -17,7 +17,9 @@ module.exports = {
         }
     },
     env: {
-        es2020: true,
+        jest: true,
+        browser: true,
+        amd: true,
         node: true
     },
     rules: {

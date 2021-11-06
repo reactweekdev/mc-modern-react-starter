@@ -1,0 +1,12 @@
+{
+    "presets": [
+        "@babel/preset-react",
+        [
+            "@babel/preset-env",
+            {
+                "shippedProposals": true,
+                "ignoreBrowserslistConfig": true
+            }
+        ]
+    ]
+}
