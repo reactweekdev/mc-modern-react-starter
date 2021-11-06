@@ -1,4 +1,4 @@
-import React, { Component } from 'react'
+import { Component } from 'react'
 
 import { Loader } from '../../components/loader/Loader'
 import { BASE_URL } from '../../utils/const'
@@ -44,7 +44,7 @@ export class EditUser extends Component {
             body: JSON.stringify(body)
         })
             .then(response => response.json())
-            .then(_ => {
+            .then(() => {
                 this.props.history.push('/')
             })
     }

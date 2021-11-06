@@ -1,4 +1,4 @@
-import React, { Component } from 'react'
+import { Component } from 'react'
 
 import { emailValid } from '../../utils/helpers'
 
@@ -16,7 +16,7 @@ export class UserForm extends Component {
         }
     }
 
-    componentDidUpdate(prevProps, prevState) {
+    componentDidUpdate(prevProps) {
         if (prevProps.user !== this.props.user) {
             const { user } = this.props
             const name = user ? user.name : ''

@@ -1,5 +1,3 @@
-import React from 'react'
-
 const Footer = () => (
     <footer className="page-footer indigo">
         <div className="footer-copyright">

@@ -1,4 +1,4 @@
-import React, { Component } from 'react'
+import { Component } from 'react';
 
 import { BASE_URL } from '../../utils/const'
 import { Loader } from '../../components/loader/Loader'
