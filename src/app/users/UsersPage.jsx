@@ -1,14 +1,13 @@
 import React, { useState } from 'react'
 import { Link } from 'react-router-dom'
 import { useMount } from 'react-use'
+import { Loader } from 'components/loader/Loader'
 
 import { userService } from 'lib/services/userService'
+
 import { UsersPageItem } from './UsersPageItem'
 
-import { Loader } from '../../components/loader/Loader'
-
 import './UsersPage.css'
-import { BASE_URL } from '../../utils/const'
 
 const UsersPage = () => {
     const [users, setUsers] = useState([])

@@ -20,7 +20,7 @@ class LoginPage extends React.Component {
         try {
             // THIS IS MOCK EXAMPLE
             const { email, password } = this.state
-            const res = await authService.login({
+            await authService.login({
                 email,
                 password
             })

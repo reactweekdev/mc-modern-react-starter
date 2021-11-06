@@ -41,7 +41,7 @@ class UserDetailsPage extends Component {
         this.setState({ isDeleting: true }, () => {
             fetch(deleteUrl, {
                 method: 'DELETE'
-            }).then(_ => {
+            }).then(() => {
                 this.props.history.push('/')
             })
         })

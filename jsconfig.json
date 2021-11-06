@@ -5,7 +5,8 @@
         "target": "ES6",
         "checkJs": true,
         "baseUrl": "src",
-        "rootDir": "src"
+        "rootDir": "src",
+        "moduleResolution": "node"
     },
     "include": ["src/**/*"]
 }

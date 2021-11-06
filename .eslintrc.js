@@ -1,4 +1,4 @@
-const pathGroups = []
+const pathGroups = ['lib']
 
 module.exports = {
     extends: ['eslint:recommended', 'plugin:react/recommended', 'prettier'],
@@ -59,15 +59,8 @@ module.exports = {
 
         'react/prop-types': 'off',
         'react/display-name': 'off',
-
-        // Mandatory return types clutters the code too much.
-        '@typescript-eslint/explicit-module-boundary-types': 'off',
-
-        // Allow empty interfaces, since a lot of components don't require props.
-        '@typescript-eslint/no-empty-interface': 'off',
-
-        // var-require is used when importing assets.
-        '@typescript-eslint/no-var-requires': 'off',
+        'react/jsx-uses-react': 'off',
+        'react/react-in-jsx-scope': 'off',
 
         // var-require is used when importing assets.
         // '@typescript-eslint/no-explicit-any': 'off',
