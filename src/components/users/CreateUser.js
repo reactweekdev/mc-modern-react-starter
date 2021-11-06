@@ -11,10 +11,11 @@ export class CreateUser extends Component {
         this.state = {}
     }
 
-    createUser = body => {
+    // TODO: createUser should be function
+    createUser = (body) => {
         this.setState(
             {
-                isCreating: true
+                isCreating: true,
             },
             () => {
                 const createUserUrl = `${BASE_URL}/users`
@@ -22,11 +23,11 @@ export class CreateUser extends Component {
                 return fetch(createUserUrl, {
                     method: 'POST',
                     headers: {
-                        'Content-Type': 'application/json'
+                        'Content-Type': 'application/json',
                     },
-                    body: JSON.stringify(body)
+                    body: JSON.stringify(body),
                 })
-                    .then(response => response.json())
+                    .then((response) => response.json())
                     .then(() => {
                         this.props.history.push('/')
                     })

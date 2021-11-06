@@ -39,7 +39,9 @@ class LoginPage extends React.Component {
                 <form className="col s6 offset-s3">
                     <div className="row">
                         <div className="input-field col s12">
-                            <i className="material-icons prefix">account_circle</i>
+                            <i className="material-icons prefix">
+                                account_circle
+                            </i>
                             <input
                                 id="email"
                                 placeholder="Email"
@@ -51,7 +53,8 @@ class LoginPage extends React.Component {
                             <span
                                 className="helper-text"
                                 data-error="wrong"
-                                data-success="right">
+                                data-success="right"
+                            >
                                 Enter your login email
                             </span>
                         </div>
@@ -70,7 +73,8 @@ class LoginPage extends React.Component {
                             <span
                                 className="helper-text"
                                 data-error="wrong"
-                                data-success="right">
+                                data-success="right"
+                            >
                                 Password must be strong
                             </span>
                         </div>
@@ -83,7 +87,8 @@ class LoginPage extends React.Component {
                     <div className="right">
                         <div
                             className="waves-effect waves-light btn indigo"
-                            onClick={this._onFormSubmit}>
+                            onClick={this._onFormSubmit}
+                        >
                             <i className="material-icons left">cloud</i>Login
                         </div>
                     </div>
