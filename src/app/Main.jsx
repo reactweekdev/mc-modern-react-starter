@@ -1,13 +1,17 @@
+import { lazy, Suspense } from 'react'
 import { Route, Switch } from 'react-router-dom'
 // import { Redirect,  } from 'react-router-dom'
 
 // import PrivateRoute from './common/PrivateRoute'
-import UserDetailsPage from './user-details/UserDetailsPage'
-import CreateUser from './users/CreateUser'
-import EditUser from './users/EditUser'
-import UsersPage from './users/UsersPage'
-import LoginPage from './login/LoginPage'
+// import { Loader } from 'components/loader/Loader'
+
 import { useAuth } from './auth-context'
+import LoginPage from './login/LoginPage'
+
+const UserDetailsPage = lazy(() => import('./user-details/UserDetailsPage'))
+const CreateUser = lazy(() => import('./users/CreateUser'))
+const EditUser = lazy(() => import('./users/EditUser'))
+const UsersPage = lazy(() => import('./users/UsersPage'))
 
 const Main = () => {
     const { isAuthenticated } = useAuth()
@@ -15,7 +19,7 @@ const Main = () => {
         <main className="container">
             <Switch>
                 {isAuthenticated ? (
-                    <>
+                    <Suspense fallback={<h1>Fallback loading</h1>}>
                         <Route
                             exact
                             path="/users/create"
@@ -32,7 +36,7 @@ const Main = () => {
                             component={UserDetailsPage}
                         />
                         <Route path="/" component={UsersPage} />
-                    </>
+                    </Suspense>
                 ) : (
                     <Route path="*" component={LoginPage} />
                 )}
