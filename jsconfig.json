@@ -3,7 +3,7 @@
         "lib": ["dom", "esnext"],
         "jsx": "react-jsx",
         "target": "ES6",
-        "checkJs": true,
+        "checkJs": false,
         "baseUrl": "src",
         "rootDir": "src",
         "moduleResolution": "node"

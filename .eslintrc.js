@@ -1,4 +1,4 @@
-const pathGroups = ['lib']
+const pathGroups = ['utils', 'lib', 'components']
 
 module.exports = {
     extends: ['eslint:recommended', 'plugin:react/recommended', 'prettier'],
@@ -46,16 +46,16 @@ module.exports = {
         ],
 
         '@typescript-eslint/no-unused-vars': 'off',
-        'unused-imports/no-unused-imports-ts': 'error',
-        'unused-imports/no-unused-vars-ts': [
-            'warn',
-            {
-                vars: 'all',
-                varsIgnorePattern: '^_',
-                args: 'after-used',
-                argsIgnorePattern: '^_'
-            }
-        ],
+        // 'unused-imports/no-unused-imports-ts': 'error',
+        // 'unused-imports/no-unused-vars-ts': [
+        //     'warn',
+        //     {
+        //         vars: 'all',
+        //         varsIgnorePattern: '^_',
+        //         args: 'after-used',
+        //         argsIgnorePattern: '^_'
+        //     }
+        // ],
 
         'react/prop-types': 'off',
         'react/display-name': 'off',

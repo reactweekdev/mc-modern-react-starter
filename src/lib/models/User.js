@@ -3,6 +3,7 @@ class User {
         this.name = apiData.name
         this.username = apiData.username
         this.email = apiData.email
+        this.address = apiData.address
     }
 
     get userInfo() {

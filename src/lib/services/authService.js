@@ -3,6 +3,10 @@ class AuthService {
         login: '/'
     }
 
+    isAuthenticated() {
+        return !!localStorage.getItem('user')
+    }
+
     login({ email, password }) {
         // this.url.login
 
