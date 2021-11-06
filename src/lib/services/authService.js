@@ -7,6 +7,10 @@ class AuthService {
         return !!localStorage.getItem('user')
     }
 
+    logout() {
+        localStorage.clear()
+    }
+
     login({ email, password }) {
         // this.url.login
 

@@ -1,4 +1,4 @@
-const pathGroups = ['utils', 'lib', 'components']
+const pathGroups = ['utils', 'lib', 'app', 'components']
 
 module.exports = {
     extends: ['eslint:recommended', 'plugin:react/recommended', 'prettier'],

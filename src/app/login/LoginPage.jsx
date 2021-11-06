@@ -1,11 +1,11 @@
-import { useHistory } from 'react-router'
-
 import { authService } from 'lib/services/authService'
+
+import { useAuth } from 'app/auth-context'
 
 import LoginForm from './LoginForm'
 
 const LoginPage = () => {
-    const history = useHistory()
+    const { setAuthenticated } = useAuth()
     const handleFormSubmit = async formData => {
         try {
             // THIS IS MOCK EXAMPLE
@@ -16,8 +16,7 @@ const LoginPage = () => {
             })
 
             //TODO: Show success toast
-
-            history.push('/')
+            setAuthenticated(true)
         } catch (error) {
             console.log(`error`, error)
             // this.setState({ error: error.message })
